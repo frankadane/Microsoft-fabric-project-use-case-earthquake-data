@@ -51,7 +51,11 @@ Magnitude_Category_Dimension (Primary Key: magCategory_id)
 
 Time_Dimension (Primary Key: full_date)
 
-![Semantic data model](screenshots/semantic_model.png)
+![Semantic data model](screenshots/semantic_model.png)   
+
+
+Refer for detail table Structures	   
+[Documentation](docs/Earthquake_Data Engineering_Pipeline_with_Microsoft_Fabric.pdf)    
 
 ## Key Features
 
@@ -63,17 +67,25 @@ Visualization: Power BI provides interactive reports and visualizations, such as
 
 ## Pipeline Steps
 
-Bronze Layer: Raw data ingestion. 
-[Ingestion:Bronze Layer notebook](notebooks/Bronze_Notebook.ipynb)  
+Bronze Layer: Raw data ingestion.     
+[Ingestion:Bronze Layer notebook](notebooks/Bronze_Notebook.ipynb)    
 
-Silver Layer: Data transformation and enrichment. 
-[Transformation:Sliver Layer notebook](notebooks/Silver_Notebook.ipynb) 
+Silver Layer: Data transformation and enrichment.     
+[Transformation:Sliver Layer notebook](notebooks/Silver_Notebook.ipynb)      
 
 Gold Layer: Business-ready data stored in a star schema ready for analysis.  
 [Business-ready :Gold_layer-Build_Initial_tables notebook](notebooks/Gold_layer-Build_Initial_tables.ipynb)   
 [Business-ready :Gold_layer daily update of tables](notebooks/Gold_Notebook.ipynb)  
 
 ![Pipeline Orchestration](screenshots/pipeline_execution.png)
+
+## Power BI Reports
+Visualizations
+Earthquake Frequency: Frequency of earthquakes visualized by location and magnitude.
+Geospatial Analysis: Interactive maps showing earthquake locations and affected areas.    
+[Power BI reportS](visualization/Worldwide_events.pptx)	  
+
+![GEO ](screenshots/Slide3_Geo.PNG)
 
 ## Requirements
 
