@@ -55,7 +55,7 @@ Time_Dimension (Primary Key: full_date)
 
 
 Refer for detail table Structures	   
-[Documentation](docs/Earthquake_Data Engineering_Pipeline_with_Microsoft_Fabric.pdf)    
+[Documentation](docs/Document_Microsoft_Fabric.pdf)    
 
 ## Key Features
 
