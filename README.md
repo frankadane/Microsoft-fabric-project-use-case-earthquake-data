@@ -51,7 +51,9 @@ Magnitude_Category_Dimension (Primary Key: magCategory_id)
 
 Time_Dimension (Primary Key: full_date)
 
-Key Features
+![Semantic data model](screenshots/semantic_model.png)
+
+## Key Features
 
 Data Orchestration: Microsoft Fabric’s Data Factory manages the data pipeline, automating data ingestion and transformation.
 
@@ -59,15 +61,21 @@ Data Processing: PySpark handles data transformations, applying business logic a
 
 Visualization: Power BI provides interactive reports and visualizations, such as earthquake frequency and impact analysis.
 
-Pipeline Steps
+## Pipeline Steps
 
-Bronze Layer: Raw data ingestion.
+Bronze Layer: Raw data ingestion. 
+[Ingestion:Bronze Layer notebook](notebooks/Bronze_Notebook.ipynb)  
 
-Silver Layer: Data transformation and enrichment.
+Silver Layer: Data transformation and enrichment. 
+[Transformation:Sliver Layer notebook](notebooks/Silver_Notebook.ipynb) 
 
-Gold Layer: Business-ready data stored in a star schema ready for analysis.
+Gold Layer: Business-ready data stored in a star schema ready for analysis.  
+[Business-ready :Gold_layer-Build_Initial_tables notebook](notebooks/Gold_layer-Build_Initial_tables.ipynb)   
+[Business-ready :Gold_layer daily update of tables](notebooks/Gold_Notebook.ipynb)  
 
-Requirements
+![Pipeline Orchestration](screenshots/pipeline_execution.png)
+
+## Requirements
 
 Environment: Microsoft Fabric
 
@@ -75,6 +83,6 @@ Tools: PySpark, Power BI
 
 Data Source: USGS Earthquake API [usgs](https://earthquake.usgs.gov/)
 
-Conclusion
+## Conclusion
 
 This project highlights the use of Microsoft Fabric for building an efficient, scalable data engineering pipeline that transforms raw data into actionable insights through structured data processing and visualization.
