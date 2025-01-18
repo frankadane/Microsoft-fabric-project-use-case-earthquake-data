@@ -15,9 +15,11 @@ Silver Layer: Data cleaning and transformation
 
 Gold Layer: Business-ready data for visualization
 
+![End to End project](screenshots/fabric_architecture.png)
+
 ## Project Structure
 
-- **Bronze Layer**: Raw data ingestion from the USGS API.
+- **Bronze Layer**: Raw data ingestion from the USGS API. [usgs](https://earthquake.usgs.gov/)
 
 Description: Stores raw earthquake data as ingested from the USGS API.
 
@@ -33,7 +35,7 @@ Converting epoch time to human-readable format
 
 Categorizing magnitude into bins
 
-3. **Gold Layer**: business-ready data for visualization.
+- **Gold Layer**: business-ready data for visualization.
 
 Description: Business-ready data stored in a star schema for analysis.
 
@@ -71,7 +73,7 @@ Environment: Microsoft Fabric
 
 Tools: PySpark, Power BI
 
-Data Source: USGS Earthquake API
+Data Source: USGS Earthquake API [usgs](https://earthquake.usgs.gov/)
 
 Conclusion
 
