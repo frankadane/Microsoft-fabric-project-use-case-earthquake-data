@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains the implementation of a comprehensive data engineering pipeline for earthquake data using Microsoft Fabric. The pipeline processes earthquake data from the USGS API and employs the Medallion architecture to organize data into three layers: Bronze, Silver, and Gold.
+This project aims to build a robust data engineering pipeline that leverages Microsoft Fabric's Data Factory, Data Engineering, and Power BI capabilities. The pipeline processes earthquake data sourced from the USGS API, implementing the Medallion architecture for efficient data management and insightful visualizations.
 
 ## Project Architecture
 The project utilizes a star schema model for the gold layer, ensuring optimized query performance and easy integration with Power BI.
