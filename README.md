@@ -19,7 +19,7 @@ Gold Layer: Business-ready data for visualization
 
 ## Project Structure
 
-- **Bronze Layer**: Raw data ingestion from the USGS API. [usgs](https://earthquake.usgs.gov/)
+- **Bronze Layer**: Raw data ingestion from the [USGS](https://earthquake.usgs.gov/) API. 
 
 Description: Stores raw earthquake data as ingested from the USGS API.
 
@@ -99,7 +99,7 @@ Data Source: [USGS](https://earthquake.usgs.gov/) Earthquake API.
 Contains sample usgs raw data used as input data, sample silver layer and gold layer output data     
 [Sample input and output data](data/)     
 
-## pipeline parameter setting     
+## Pipeline parameter setting     
 [pipeline date parameter](pipelines/pipeline_data_parameter_to_notebook.png)     
 
 
