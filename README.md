@@ -93,7 +93,15 @@ Environment: Microsoft Fabric
 
 Tools: PySpark, Power BI
 
-Data Source: USGS Earthquake API [usgs](https://earthquake.usgs.gov/)
+Data Source: [USGS](https://earthquake.usgs.gov/) Earthquake API.    
+
+## Sample Data
+Contains sample usgs raw data used as input data, sample silver layer and gold layer output data     
+[Sample input and output data](data/)     
+
+## pipeline parameter setting     
+[pipeline date parameter](pipelines/pipeline_data_parameter_to_notebook.png)     
+
 
 ## Conclusion
 
