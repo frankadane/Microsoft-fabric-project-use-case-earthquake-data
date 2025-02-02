@@ -1,0 +1,106 @@
+{
+    "name": "earth_final_pipeline",
+    "objectId": "6cebacee-d892-4c9e-960d-1f81c0a4bbae",
+    "properties": {
+        "activities": [
+            {
+                "name": "Bronze Activity",
+                "type": "TridentNotebook",
+                "dependsOn": [],
+                "policy": {
+                    "timeout": "0.12:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "typeProperties": {
+                    "notebookId": "90361c00-2b3c-4fcb-9fed-1e98021f5187",
+                    "workspaceId": "dd4e4e02-925b-4769-9c27-f6784f8f60b3",
+                    "parameters": {
+                        "start_date": {
+                            "value": {
+                                "value": "@formatDateTime(adddays(utcNow(),-1),'yyyy-MM-dd')",
+                                "type": "Expression"
+                            },
+                            "type": "string"
+                        },
+                        "end_date": {
+                            "value": {
+                                "value": "@formatDateTime(utcNow(),'yyyy-MM-dd')",
+                                "type": "Expression"
+                            },
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            {
+                "name": "Silver Activity",
+                "type": "TridentNotebook",
+                "dependsOn": [
+                    {
+                        "activity": "Bronze Activity",
+                        "dependencyConditions": [
+                            "Succeeded"
+                        ]
+                    }
+                ],
+                "policy": {
+                    "timeout": "0.12:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "typeProperties": {
+                    "notebookId": "1f38bf67-9f3b-416d-9091-c379c3269517",
+                    "workspaceId": "dd4e4e02-925b-4769-9c27-f6784f8f60b3",
+                    "parameters": {
+                        "start_date": {
+                            "value": {
+                                "value": "@formatDateTime(adddays(utcNow(),-1),'yyyy-MM-dd')",
+                                "type": "Expression"
+                            },
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            {
+                "name": "Gold Activity",
+                "type": "TridentNotebook",
+                "dependsOn": [
+                    {
+                        "activity": "Silver Activity",
+                        "dependencyConditions": [
+                            "Succeeded"
+                        ]
+                    }
+                ],
+                "policy": {
+                    "timeout": "0.12:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "typeProperties": {
+                    "notebookId": "dfdea7b0-b8fa-420a-b9da-f3a4f6663095",
+                    "workspaceId": "dd4e4e02-925b-4769-9c27-f6784f8f60b3",
+                    "parameters": {
+                        "start_date": {
+                            "value": {
+                                "value": "@formatDateTime(adddays(utcNow(),-1),'yyyy-MM-dd')",
+                                "type": "Expression"
+                            },
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        ],
+        "lastModifiedByObjectId": "986b93fe-65f0-4be4-afc2-7a34b9c42b2f",
+        "lastPublishTime": "2025-01-17T18:47:36Z"
+    }
+}
